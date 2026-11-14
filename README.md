@@ -10,27 +10,27 @@ This repository implements an end-to-end Computer Vision and Explainable AI (XAI
 
   Key Features & Architecture
 1. Classical Image Processing Preprocessing:
-   - Denoising: Gaussian/Median spatial filtering to suppress sensor and environmental noise.
-   - Contrast Enhancement: Adaptive histogram equalization (CLAHE) to normalize greenhouse lighting variations.
-   - ROI Segmentation: HSV color-space thresholding and morphological operations to isolate leaf tissue from complex backgrounds.
+  Denoising: Gaussian/Median spatial filtering to suppress sensor and environmental noise.
+  Contrast Enhancement: Adaptive histogram equalization (CLAHE) to normalize greenhouse lighting variations.
+  ROI Segmentation: HSV color-space thresholding and morphological operations to isolate leaf tissue from complex backgrounds.
 2. Lightweight Edge-CNN Architecture:
-   - Utilizes Depthwise Separable Convolutions, Batch Normalization, and Global Average Pooling to drastically reduce parameter count and FLOPs for real-time edge inference.
+  Utilizes Depthwise Separable Convolutions, Batch Normalization, and Global Average Pooling to drastically reduce parameter count and FLOPs for real-time edge inference.
 3. Explainable AI (Grad-CAM Localization):
-   - Extracts gradients from the final convolutional layer to generate class-discriminative heatmaps, proving that the network focuses on actual necrotic spots and fungal lesions rather than background artifacts.
+  Extracts gradients from the final convolutional layer to generate class-discriminative heatmaps, proving that the network focuses on actual necrotic spots and fungal lesions rather than background artifacts.
 4. Edge Hardware Profiling:
-   - Evaluates model memory footprint (MB), parameter count, and per-image inference latency (ms).
+  Evaluates model memory footprint (MB), parameter count, and per-image inference latency (ms).
 
 
  🛠️ Tech Stack
-- Deep Learning: PyTorch
-- Image Processing: OpenCV, NumPy, SciPy
-- Evaluation & Visualization: Scikit-Learn, Matplotlib, Seaborn
+ Deep Learning: PyTorch
+ Image Processing: OpenCV, NumPy, SciPy
+ Evaluation & Visualization: Scikit-Learn, Matplotlib, Seaborn
 
 
  📂 Repository Structure
-- plant_vision_XAI_pipeline.ipynb: Complete modular notebook containing data synthesis, classical image processing, lightweight CNN training, Grad-CAM computation, and edge profiling.
-- gradcam_results.png: Visual dashboard comparing raw inputs, preprocessed masks, Grad-CAM heatmaps, and confidence overlays.
-- requirements.txt: Required Python dependencies.
+ plant_vision_XAI_pipeline.ipynb: Complete modular notebook containing data synthesis, classical image processing, lightweight CNN training, Grad-CAM computation, and edge profiling.
+ gradcam_results.png: Visual dashboard comparing raw inputs, preprocessed masks, Grad-CAM heatmaps, and confidence overlays.
+ requirements.txt: Required Python dependencies.
 
 
  ⚙️ How to Run
